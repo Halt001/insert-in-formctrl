@@ -1,0 +1,21 @@
+<button (click)="showForm = !showForm" class="c-app__show-form-btn">Toggle Remove From</button>
+
+<ng-container *ngIf="showForm">
+  <form [formGroup]="myForm">
+    <div class="c-app__form-container">
+      <label class="c-app__label">Input:</label>
+
+      <input type="text" formControlName="123abc">
+
+      <button (click)="clickedInsert('123abc', '--Foo--')">Insert</button>
+    </div>
+
+    <div class="c-app__form-container">
+      <label class="c-app__label">Input:</label>
+
+      <input type="text" formControlName="456xyz">
+
+      <button (click)="clickedInsert('456xyz', '--Bar--')">Insert</button>
+    </div>
+  </form>
+</ng-container>
